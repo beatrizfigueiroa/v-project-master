@@ -1,0 +1,178 @@
+
+body {
+  background-color: #F1F0F2;
+  min-height: 100vh;
+  font-family: 'city-boys';
+  /* overflow-y: scroll; */
+}
+.container-input{
+  max-width: 100%;
+}
+input{
+  width: 100px;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+.logo {
+  position: fixed;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  margin-right: 15px;
+  margin-top: 15px;
+  align-items: center;
+}
+
+.logo-text {
+  font-family: 'neue';
+  font-size: 12px;
+  color: #583883;
+  font-weight: bolder;
+}
+
+.logo-text+.img-logo {
+  margin-left: 8px;
+}
+
+.container-crm {
+  margin: 0px 15px;
+}
+
+.sales {
+  font-size: 37px;
+}
+.title-table{
+  font-size: 10px;
+  font-weight: bold;
+}
+button {
+  border-radius: 13px;
+  padding: 8px 20px;
+  border: rgb(215, 255, 205);
+  color: white;
+  cursor: pointer;
+}
+
+th {
+  border-right: solid 1px #000;
+}
+
+td {
+  color: #000;
+  border: #000;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-row {
+  text-align: center;
+}
+.price{
+  color: #1ED982;
+  font-size: 30px;
+  font-weight: bold;
+}
+.bold{
+  font-weight: bold;
+  font-size: 17px;
+}
+.add-sale-button {
+  width: 50%;
+  background-color: #1ED982;
+}
+
+.spreadsheet-button {
+  background-color: #5E3E8C;
+}
+
+table, th, td {
+  /* border-top: 1px solid black; */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.493);
+}
+
+.divider {
+  background-color: #000;
+}
+
+.right {
+  right: 1;
+}
+
+.margin {
+  margin: 10px
+}
+
+.no-margin {
+  margin: 0
+}
+
+.input-field {
+  padding: 0;
+}
+
+.input-field+.input-field {
+  padding-left: 15px;
+}
+
+.box {
+  width: 17vw;
+  position: absolute;
+  left: 15px;
+  top: 5vh;
+  height: 15vh;
+}
+.example-month-picker .mat-calendar-period-button {
+  pointer-events: none;
+}
+
+.example-month-picker .mat-calendar-arrow {
+  display: none;
+}
+:host::ng-deep.mat-datepicker-content .mat-calendar {
+
+  top: 5vh;
+  position: fixed !important;
+}
+.mat-calendar {
+  display: block;
+}
+.checkbox{
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px 15px;
+  height: 0px;
+  text-align: center; 
+  width: 50px;
+}
+span.checkbox-span{
+  display: block;
+  padding: 0;
+  height: 20px;
+}
+.relative {
+ 
+  min-height: 100%;
+  margin-top: 20vh
+}
+
+.crm {
+  font-size: 50px;
+}
+
+.title {
+  color: #5E3E8C;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+  font-family: 'neue';
+}
+
+.no-padding {
+  padding-bottom: 0;
+  padding-left: 20px;
+}

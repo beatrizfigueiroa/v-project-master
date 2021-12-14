@@ -1,0 +1,146 @@
+<body>
+
+  <div class="container-crm">
+    <div class="logo">
+      <span class="logo-text">by</span>
+      <!-- <div class="img-logo"> -->
+      <img class="img-logo" src="./assets/img/valorian-logo.png" height="15px" alt="">
+      <!-- </div> -->
+    </div>
+    <div class="row-header flex">
+
+      <div class="box">
+
+        <p class="no-margin sales">Suas vendas</p>
+
+        <div class="row no-margin">
+          <div class="input-field col m8">
+            <!-- <i class="Small material-icons">arrow_drop_down</i>
+              <input type="text" class="datepicker"> -->
+              <mat-form-field>
+                <input matInput [matDatepicker]="dp" placeholder="Month and Year" [formControl]="date">
+                <mat-datepicker-toggle  [for]="dp">
+                  <mat-icon matDatepickerToggleIcon  (click)="dp.open()">
+                    <i class="material-icon">arrow_drop_down</i>
+                  </mat-icon>
+                </mat-datepicker-toggle>
+                <mat-datepicker #dp
+                                startView="multi-year"
+                                (yearSelected)="chosenYearHandler($event)"
+                                (monthSelected)="chosenMonthHandler($event, dp)"
+                                panelClass="example-month-picker">
+                </mat-datepicker>
+              </mat-form-field>
+
+          </div>
+          <div class="input-field col  m4">
+            <select>
+              <optgroup label="team 1">
+                <option value="1">UF</option>
+                <option value="2">Option 2</option>
+              </optgroup>
+              <optgroup label="team 2">
+                <option value="3">Option 3</option>
+                <option value="4">Option 4</option>
+              </optgroup>
+            </select>
+          </div>
+        </div>
+        <p class="no-margin bold">Total de vendas no período</p>
+        <p class="no-margin price">R$ 32.600,00</p>
+      </div>
+      <div class="title ">
+        <p>Meu Mini<br><span class="crm">CRM</span></p>
+      </div>
+    </div>
+    <div class="relative">
+
+      <div class="right margin">
+        <button class="spreadsheet-button">Conecte sua planilha de vendas</button>
+      </div>
+
+      <table class="center ">
+        <thead>
+          <tr>
+            <th class="checkbox">
+              <label >
+
+                <input class="filled-in"  type="checkbox" />
+                <span class="checkbox-span" ></span>
+              </label>
+               
+            </th>
+            <th class="no-padding">NOME DO CLIENTE</th>
+            <th class="no-padding">DATA DA VENDA</th>
+            <th class="no-padding">VALOR</th>
+            <th class="no-padding">ORIGEM DO CLIENTE</th>
+            <th class="no-padding">PAÍS</th>
+            <th class="no-padding">ESTADO DO CLIENTE</th>
+            <th class="no-padding">SEXO DO CLIENTE</th>
+            <th class="no-padding">IDADE DO CLIENTE</th>
+          </tr>
+        </thead>
+        <td colspan="9" class="button-row">
+          <button class="add-sale-button" (click)="addSale()">+ Adicionar venda</button>
+        </td>
+
+        <tbody>
+
+          <tr *ngIf="enabled" class="container-input row" >
+            <td></td>
+            <td>
+
+              <input class="input-field " [(ngModel)]="clientsName" />
+            </td>
+            <td>
+
+              <input class="input-field " [(ngModel)]="salesDate" />
+            </td>
+            <td>
+
+              <input class="input-field " [(ngModel)]="price" />
+            </td>
+            <td>
+
+              <input class="input-field " [(ngModel)]="clientsOrigin" />
+            </td>
+            <td>
+
+              <input class="input-field " [(ngModel)]="country" />
+            </td>
+            <td>
+
+              <input class="input-field " [(ngModel)]="state" />
+            </td>
+            <td>
+
+              <input class="input-field " [(ngModel)]="gender" />
+            </td>
+            <td>
+
+              <input class="input-field " [(ngModel)]="age" />
+            </td>
+          </tr>
+          <tr *ngFor="let sale of sales" >
+            <td class="checkbox"  *ngIf="sale.clientsName"><label>
+                <input class="filled-in" type="checkbox" />
+                <span class="checkbox-span"> </span>
+              </label></td>
+            <td class="no-padding" *ngIf="sale.clientsName" >{{sale.clientsName}}</td>
+            <td class="no-padding" *ngIf="sale.salesDate">{{sale.salesDate}}</td>
+            <td class="no-padding" *ngIf="sale.price">{{sale.price}}</td>
+            <td class="no-padding" *ngIf="sale.clientsOrigin">{{sale.clientsOrigin}}</td>
+            <td class="no-padding" *ngIf="sale.country">{{sale.country}}</td>
+            <td class="no-padding" *ngIf="sale.state">{{sale.state}}</td>
+            <td class="no-padding" *ngIf="sale.gender">{{sale.gender}}</td>
+            <td class="no-padding" *ngIf="sale.age">{{sale.age}}</td>
+
+          </tr>
+        </tbody>
+      </table>
+
+
+    </div>
+  </div>
+
+</body>

@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: london-bridge;
+    src: url(assets/fonts/fype-co-londonbridge-semibold.otf);
+}
+@font-face {
+    font-family: city-boys;
+    src: url(assets/fonts/CityBoysSoft-Regular.otf);
+}
+@font-face {
+    font-family: london-bridge-extraBold;
+    src: url(assets/fonts/LondonBridge-ExtraBold.ttf);
+}
+@font-face {
+    font-family:neue;
+    src: url(assets/fonts/Neue-Radial-C-Bold.ttf);
+}
